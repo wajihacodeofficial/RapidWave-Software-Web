@@ -15,7 +15,7 @@ import FAQ from './pages/FAQ';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';
 import TermsConditions from './pages/TermsConditions';
-import EstimatorPage from './pages/Estimator';
+
 import NotFound from './pages/NotFound';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -39,7 +39,6 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/cookie" element={<CookiePolicy />} />
           <Route path="/terms" element={<TermsConditions />} />
-          <Route path="/estimator" element={<EstimatorPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

@@ -372,6 +372,93 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Ecosystem Section */}
+      <section
+        style={{
+          padding: 'var(--section-padding) 0',
+          background: 'var(--bg-primary)',
+        }}
+      >
+        <div className="container">
+          <header style={{ textAlign: 'center', marginBottom: '6rem' }}>
+            <span className="text-label">Strategic Overview</span>
+            <h2 className="section-title">
+              Our <span className="accent-text">Ecosystem</span>
+            </h2>
+            <p
+              className="text-text-secondary"
+              style={{
+                maxWidth: '600px',
+                margin: '1.5rem auto 0',
+                fontSize: '1.1rem',
+              }}
+            >
+              We integrate with the world's most powerful infrastructure to
+              deliver seamless, enterprise-grade solutions.
+            </p>
+          </header>
+
+          <div
+            className="grid grid-4"
+            style={{ gap: '2rem', textAlign: 'center' }}
+          >
+            {[
+              {
+                title: 'Cloud Infrastructure',
+                desc: 'AWS, Google Cloud, Azure',
+                icon: '☁️',
+              },
+              {
+                title: 'Payment Gateways',
+                desc: 'Stripe, PayPal, Razorpay',
+                icon: '💳',
+              },
+              {
+                title: 'Communication',
+                desc: 'Twilio, SendGrid, Firebase',
+                icon: '📡',
+              },
+              {
+                title: 'Data & Analytics',
+                desc: 'MongoDB, PostgreSQL, Google Analytics',
+                icon: '📊',
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-card"
+                style={{ padding: '3rem 2rem' }}
+              >
+                <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>
+                  {item.icon}
+                </div>
+                <h4
+                  style={{
+                    fontSize: '1.1rem',
+                    marginBottom: '1rem',
+                    color: 'var(--text-primary)',
+                  }}
+                >
+                  {item.title}
+                </h4>
+                <p
+                  style={{
+                    fontSize: '0.9rem',
+                    color: 'var(--text-secondary)',
+                  }}
+                >
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why RapidWave */}
       <section style={{ padding: 'var(--section-padding) 0' }}>
         <div className="container">

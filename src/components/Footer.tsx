@@ -191,19 +191,6 @@ const Footer: React.FC = () => {
                   Methodology Protocol
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/careers"
-                  style={{
-                    fontSize: '0.75rem',
-                    color: 'var(--text-secondary)',
-                    textDecoration: 'none',
-                  }}
-                  className="footer-link"
-                >
-                  Careers
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -402,19 +389,7 @@ const Footer: React.FC = () => {
                   Terms & Conditions
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/estimator"
-                  style={{
-                    fontSize: '0.75rem',
-                    color: 'var(--text-secondary)',
-                    textDecoration: 'none',
-                  }}
-                  className="footer-link"
-                >
-                  Project Estimator
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/contact"

@@ -23,6 +23,14 @@ const FAQ: React.FC = () => {
       q: 'Can you migrate legacy systems to modern stacks?',
       a: 'Migration is a core competency. We conduct deep-dive technical audits to ensure data integrity during the transition to high-performance, modular architectures.',
     },
+    {
+      q: 'Do you provide dedicated development teams?',
+      a: 'Absolutely. For long-term partners, we deploy dedicated engineering cells that integrate directly with your internal operations, ensuring complete alignment with your product roadmap.',
+    },
+    {
+      q: 'What is your approach to security?',
+      a: 'Security is foundational, not an afterthought. We implement zero-trust architectures, end-to-end encryption, and rigorous penetration testing protocols for every deployment.',
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

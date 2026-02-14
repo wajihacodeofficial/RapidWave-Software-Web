@@ -110,6 +110,32 @@ const Portfolio: React.FC = () => {
             <h1 className="section-title">
               Engineering <span className="accent-text">Showcase</span>
             </h1>
+
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '1.5rem',
+                marginTop: '1.5rem',
+              }}
+            >
+              <button
+                className="btn btn-outline"
+                style={{
+                  padding: '0.8rem 2rem',
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.15em',
+                }}
+                onClick={() => {
+                  /* Placeholder for Client Portal action */
+                  alert(
+                    'Client Portal Access Restricted: Authorized Personnel Only'
+                  );
+                }}
+              >
+                ACCESS CLIENT PORTAL
+              </button>
+            </div>
             <p
               className="text-text-secondary"
               style={{
