@@ -1,0 +1,472 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer: React.FC = () => {
+  return (
+    <footer
+      className="bg-secondary"
+      style={{
+        borderTop: '1px solid var(--card-border)',
+        padding: 'var(--section-padding) 0 4rem',
+      }}
+    >
+      <div className="container">
+        <div
+          className="grid grid-4 footer-grid"
+          style={{ marginBottom: '5rem' }}
+        >
+          <div
+            style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+          >
+            <Link
+              to="/"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                textDecoration: 'none',
+              }}
+            >
+              <img
+                src="/logo.png"
+                alt="RapidWave Logo"
+                style={{ width: '32px', height: '32px', borderRadius: '8px' }}
+              />
+              <span
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontWeight: 800,
+                  fontSize: '1.2rem',
+                  color: 'var(--text-primary)',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                RAPIDWAVE
+              </span>
+            </Link>
+            <p
+              style={{
+                fontSize: '0.8rem',
+                color: 'var(--text-secondary)',
+                lineHeight: '1.7',
+              }}
+            >
+              Advanced Software Engineering & Architectural Consulting.
+              Architecting global-scale infrastructure for mission-critical
+              enterprise operations.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              style={{
+                fontSize: '0.65rem',
+                fontWeight: 800,
+                letterSpacing: '0.2em',
+                color: 'var(--accent-primary)',
+                marginBottom: '1.5rem',
+              }}
+            >
+              SERVICES
+            </h4>
+            <ul
+              style={{
+                listStyle: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+              }}
+            >
+              <li>
+                <Link
+                  to="/services#mern"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  MERN Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#java"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Java Desktop Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#mobile"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#logic"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Custom Logic Design
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              style={{
+                fontSize: '0.65rem',
+                fontWeight: 800,
+                letterSpacing: '0.2em',
+                color: 'var(--accent-primary)',
+                marginBottom: '1.5rem',
+              }}
+            >
+              RESOURCES
+            </h4>
+            <ul
+              style={{
+                listStyle: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+              }}
+            >
+              <li>
+                <Link
+                  to="/portfolio"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/protocol"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Methodology Protocol
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/careers"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              style={{
+                fontSize: '0.65rem',
+                fontWeight: 800,
+                letterSpacing: '0.2em',
+                color: 'var(--accent-primary)',
+                marginBottom: '1.5rem',
+              }}
+            >
+              CONNECT
+            </h4>
+            <ul
+              style={{
+                listStyle: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+              }}
+            >
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/rapidwavesoftware/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  LinkedIn
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/rapidwavesoftware/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/people/RapidWave-Software/61587627214444/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/faq"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/insights"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tech-stack"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Tech Stack
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Contact Form
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              style={{
+                fontSize: '0.65rem',
+                fontWeight: 800,
+                letterSpacing: '0.2em',
+                color: 'var(--accent-primary)',
+                marginBottom: '1.5rem',
+              }}
+            >
+              SUPPORT
+            </h4>
+            <ul
+              style={{
+                listStyle: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+              }}
+            >
+              <li>
+                <a
+                  href="https://wa.me/923177760506"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  WhatsApp Support
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cookie"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/estimator"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--text-secondary)',
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Project Estimator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--accent-primary)',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                  }}
+                  className="footer-link"
+                >
+                  Get a Quote →
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          className="footer-bottom"
+          style={{
+            borderTop: '1px solid var(--card-border)',
+            paddingTop: '2rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <p
+            style={{
+              fontSize: '0.65rem',
+              color: 'var(--text-muted)',
+              fontWeight: 800,
+              letterSpacing: '0.1em',
+            }}
+          >
+            © 2026 RAPIDWAVE SOFTWARE. ALL RIGHTS RESERVED.
+          </p>
+          <p
+            style={{
+              fontSize: '0.65rem',
+              color: 'var(--text-muted)',
+              fontWeight: 800,
+              letterSpacing: '0.1em',
+            }}
+          >
+            BUILDING THE FUTURE.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
