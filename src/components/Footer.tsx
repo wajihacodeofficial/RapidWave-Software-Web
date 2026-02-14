@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
           >
             <Link
               to="/"
+              onClick={() => window.scrollTo(0, 0)}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -80,6 +81,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services#mern"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -93,6 +95,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services#java"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -106,6 +109,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services#mobile"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -119,6 +123,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services#logic"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -155,6 +160,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/portfolio"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -168,6 +174,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/about"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -181,6 +188,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/protocol"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -263,6 +271,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/faq"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -273,22 +282,11 @@ const Footer: React.FC = () => {
                   FAQ
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/insights"
-                  style={{
-                    fontSize: '0.75rem',
-                    color: 'var(--text-secondary)',
-                    textDecoration: 'none',
-                  }}
-                  className="footer-link"
-                >
-                  Insights
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/tech-stack"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -302,6 +300,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/contact"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -353,6 +352,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/privacy"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -366,6 +366,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/cookie"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -379,6 +380,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/terms"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--text-secondary)',
@@ -393,6 +395,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/contact"
+                  onClick={() => window.scrollTo(0, 0)}
                   style={{
                     fontSize: '0.75rem',
                     color: 'var(--accent-primary)',

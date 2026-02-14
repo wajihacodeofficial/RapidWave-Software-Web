@@ -9,7 +9,7 @@ import Portfolio from './pages/Portfolio';
 import CaseStudy from './pages/CaseStudy';
 import TechStack from './pages/TechStack';
 import Methodology from './pages/Methodology';
-import Insights from './pages/Insights';
+
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -33,7 +33,7 @@ function App() {
           <Route path="/portfolio/:id" element={<CaseStudy />} />
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/protocol" element={<Methodology />} />
-          <Route path="/insights" element={<Insights />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

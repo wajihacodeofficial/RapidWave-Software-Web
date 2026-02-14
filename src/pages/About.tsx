@@ -372,7 +372,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Ecosystem Section */}
+      {/* Tech Stack Section */}
       <section
         style={{
           padding: 'var(--section-padding) 0',
@@ -380,50 +380,79 @@ const About: React.FC = () => {
         }}
       >
         <div className="container">
-          <header style={{ textAlign: 'center', marginBottom: '6rem' }}>
-            <span className="text-label">Strategic Overview</span>
+          <header style={{ textAlign: 'center', marginBottom: '8rem' }}>
+            <span className="text-label">The Technical Standard</span>
             <h2 className="section-title">
-              Our <span className="accent-text">Ecosystem</span>
+              Our <span className="accent-text">Core Ecosystem</span>
             </h2>
             <p
               className="text-text-secondary"
               style={{
-                maxWidth: '600px',
-                margin: '1.5rem auto 0',
-                fontSize: '1.1rem',
+                maxWidth: '750px',
+                margin: '2rem auto 0',
+                fontSize: '1.25rem',
+                lineHeight: '1.8',
               }}
             >
-              We integrate with the world's most powerful infrastructure to
-              deliver seamless, enterprise-grade solutions.
+              We don't chase every trend. We master the most performant, stable,
+              and scalable technologies to ensure your software is future-proof.
             </p>
           </header>
 
-          <div
-            className="grid grid-4"
-            style={{ gap: '2rem', textAlign: 'center' }}
-          >
+          <div className="grid grid-2" style={{ gap: '4rem' }}>
             {[
               {
-                title: 'Cloud Infrastructure',
-                desc: 'AWS, Google Cloud, Azure',
-                icon: '☁️',
+                title: 'Distributed Systems (Java)',
+                desc: 'High-concurrency enterprise cores built with the Spring ecosystem. We specialize in robust, type-safe architectures for mission-critical operations.',
+                techs: [
+                  'Spring Boot',
+                  'Java 21',
+                  'Microservices',
+                  'PostgreSQL',
+                  'Docker',
+                  'Kubernetes',
+                ],
+                icon: '🏛️',
               },
               {
-                title: 'Payment Gateways',
-                desc: 'Stripe, PayPal, Razorpay',
-                icon: '💳',
+                title: 'Real-time Web (MERN)',
+                desc: 'Dynamic, lightning-fast web applications using modern JavaScript standards. Optimized for sub-second responses and global scalability.',
+                techs: [
+                  'React',
+                  'Node.js',
+                  'Next.js',
+                  'MongoDB',
+                  'Redis',
+                  'Socket.io',
+                ],
+                icon: '🕸️',
               },
               {
-                title: 'Communication',
-                desc: 'Twilio, SendGrid, Firebase',
-                icon: '📡',
+                title: 'Mobile Ecosystems',
+                desc: 'Seamless cross-platform deployments that feel truly native. We handle the complexity of iOS and Android with unified technical standards.',
+                techs: [
+                  'Flutter',
+                  'Firebase',
+                  'Native Modules',
+                  'Fastlane',
+                  'App Store Ops',
+                ],
+                icon: '📱',
               },
               {
-                title: 'Data & Analytics',
-                desc: 'MongoDB, PostgreSQL, Google Analytics',
-                icon: '📊',
+                title: 'Design-to-Code',
+                desc: 'Bridge the gap between vision and reality. We transform high-fidelity Figma designs into pixel-perfect, performant React components.',
+                techs: [
+                  'Figma',
+                  'Framer Motion',
+                  'Tailwind CSS',
+                  'Storybook',
+                  'Lottie',
+                  'Three.js',
+                ],
+                icon: '🎨',
               },
-            ].map((item, i) => (
+            ].map((stack, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -431,28 +460,42 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="glass-card"
-                style={{ padding: '3rem 2rem' }}
+                style={{ padding: '4rem' }}
               >
-                <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>
-                  {item.icon}
+                <div style={{ fontSize: '3rem', marginBottom: '2rem' }}>
+                  {stack.icon}
                 </div>
-                <h4
-                  style={{
-                    fontSize: '1.1rem',
-                    marginBottom: '1rem',
-                    color: 'var(--text-primary)',
-                  }}
-                >
-                  {item.title}
-                </h4>
+                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>
+                  {stack.title}
+                </h3>
                 <p
                   style={{
-                    fontSize: '0.9rem',
                     color: 'var(--text-secondary)',
+                    lineHeight: '1.8',
+                    marginBottom: '3rem',
+                    fontSize: '1.05rem',
                   }}
                 >
-                  {item.desc}
+                  {stack.desc}
                 </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                  {stack.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      style={{
+                        padding: '0.6rem 1.4rem',
+                        background: 'var(--bg-primary)',
+                        border: '1px solid var(--card-border)',
+                        borderRadius: '100px',
+                        fontSize: '0.75rem',
+                        fontWeight: 800,
+                        color: 'var(--accent-primary)',
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
