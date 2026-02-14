@@ -7,52 +7,59 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     // Web Applications
+    // Web Applications
     {
       id: 1,
       title: 'Bitedash',
       category: 'Web',
-      image: '/projects/bitedash.png',
+      image:
+        'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=2832&auto=format&fit=crop',
       desc: 'Multi-restaurant food delivery platform with real-time order tracking and payment integration.',
-      tech: ['React', 'Node.js', 'Stripe'],
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     },
     {
       id: 2,
       title: 'Medify',
       category: 'Web',
-      image: '/projects/medify.png',
+      image:
+        'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=2944&auto=format&fit=crop',
       desc: 'Comprehensive pharmacy management system with inventory tracking and admin dashboard.',
-      tech: ['React', 'Firebase', 'Tailwind'],
+      tech: ['React', 'Express.js', 'MongoDB', 'Tailwind'],
     },
     {
       id: 3,
       title: 'Clinic Management System',
       category: 'Web',
-      image: '/projects/clinic.png',
+      image:
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2944&auto=format&fit=crop',
       desc: 'Digital healthcare solution for patient registration, appointment booking, and billing.',
-      tech: ['Next.js', 'PostgreSQL', 'Prisma'],
+      tech: ['Next.js', 'PostgreSQL', 'Node.js'],
     },
     {
       id: 4,
       title: 'E-Commerce Platform',
       category: 'Web',
-      image: '/projects/ecommerce.png',
+      image:
+        'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2832&auto=format&fit=crop',
       desc: 'Scalable online retail solution with product catalog, shopping cart, and order tracking.',
-      tech: ['React', 'Redux', 'Stripe'],
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     },
     {
       id: 5,
       title: 'LMS Platform',
       category: 'Web',
-      image: '/projects/lms.png',
+      image:
+        'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2832&auto=format&fit=crop',
       desc: 'Interactive learning management system with video lessons, quizzes, and progress tracking.',
-      tech: ['React', 'Node.js', 'MongoDB'],
+      tech: ['React', 'Express.js', 'MongoDB'],
     },
     // Mobile Applications
     {
       id: 6,
       title: 'On-Demand Service App',
       category: 'Mobile',
-      image: '/projects/ondemand.png',
+      image:
+        'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop',
       desc: 'Real-time booking application with location tracking and secure payment gateway.',
       tech: ['Flutter', 'Firebase', 'Google Maps API'],
     },
@@ -60,34 +67,38 @@ const Portfolio: React.FC = () => {
       id: 7,
       title: 'Finance Tracker',
       category: 'Mobile',
-      image: '/projects/finance.png',
+      image:
+        'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop',
       desc: 'Personal finance manager with income/expense analytics, charts, and secure storage.',
-      tech: ['Flutter', 'SQLite', 'Charts'],
+      tech: ['Flutter', 'Firebase', 'Charts'],
     },
     {
       id: 8,
       title: 'Cloud Kitchen App',
       category: 'Mobile',
-      image: '/projects/cloud-kitchen.png',
+      image:
+        'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2944&auto=format&fit=crop',
       desc: 'Mobile ordering system for cloud kitchens with menu browsing and delivery tracking.',
-      tech: ['Flutter', 'Node.js', 'Socket.io'],
+      tech: ['Flutter', 'Firebase', 'Socket.io'],
     },
     // Desktop Applications
     {
       id: 9,
       title: 'Organizer Desktop',
       category: 'Desktop',
-      image: '/projects/organizer.png',
+      image:
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop',
       desc: 'Productivity tool for task management, scheduling, and seamless data export.',
-      tech: ['Electron', 'React', 'LocalDB'],
+      tech: ['Electron', 'React', 'Node.js'],
     },
     {
       id: 10,
       title: 'HR Management System',
       category: 'Desktop',
-      image: '/projects/hrms.png',
+      image:
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop',
       desc: 'Enterprise-grade system for employee management, payroll processing, and reporting.',
-      tech: ['C#', '.NET', 'SQL Server'],
+      tech: ['React', 'Spring Boot', 'PostgreSQL'],
     },
   ];
 

@@ -420,6 +420,7 @@ const About: React.FC = () => {
                 techs: [
                   'React',
                   'Node.js',
+                  'Express.js',
                   'Next.js',
                   'MongoDB',
                   'Redis',
@@ -430,13 +431,7 @@ const About: React.FC = () => {
               {
                 title: 'Mobile Ecosystems',
                 desc: 'Seamless cross-platform deployments that feel truly native. We handle the complexity of iOS and Android with unified technical standards.',
-                techs: [
-                  'Flutter',
-                  'Firebase',
-                  'Native Modules',
-                  'Fastlane',
-                  'App Store Ops',
-                ],
+                techs: ['Flutter', 'Firebase', 'Fastlane', 'App Store Ops'],
                 icon: '📱',
               },
               {
