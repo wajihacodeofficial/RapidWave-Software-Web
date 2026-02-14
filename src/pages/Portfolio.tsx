@@ -40,7 +40,7 @@ const Portfolio: React.FC = () => {
       title: 'E-Commerce Platform',
       category: 'Web',
       image:
-        'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2832&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop',
       desc: 'Scalable online retail solution with product catalog, shopping cart, and order tracking.',
       tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     },

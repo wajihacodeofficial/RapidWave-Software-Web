@@ -179,7 +179,7 @@ const CaseStudy: React.FC = () => {
       timeline: '16 weeks full platform development',
       platforms: 'Web Application (Desktop, Tablet, Mobile Responsive)',
       images: [
-        'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2832&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop', // Desktop analytics
         'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop', // Mobile shopping
       ],
