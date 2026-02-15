@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { useWave } from '../context/WaveContext';
+import { useWaveDispatch } from '../context/WaveContext';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ShieldCheck, Cpu, Layers, Search, LineChart } from 'lucide-react';
@@ -8,7 +8,7 @@ import { ShieldCheck, Cpu, Layers, Search, LineChart } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const Methodology: React.FC = () => {
-  const { setWaveParams } = useWave();
+  const { setWaveParams } = useWaveDispatch();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const steps = [
@@ -109,10 +109,11 @@ const Methodology: React.FC = () => {
                 }}
               >
                 <div
+                  className="protocol-step-number"
                   style={{
-                    fontSize: '4.5rem',
+                    fontSize: 'clamp(3rem, 10vw, 4.5rem)',
                     fontWeight: 900,
-                    opacity: 0.1,
+                    opacity: 0.15,
                     color: 'var(--accent-primary)',
                     textAlign: 'center',
                     fontFamily: 'var(--font-heading)',
@@ -127,13 +128,18 @@ const Methodology: React.FC = () => {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '1.5rem',
-                      marginBottom: '1.5rem',
+                      marginBottom: '1rem',
                     }}
                   >
                     <span style={{ color: 'var(--accent-primary)' }}>
                       {step.icon}
                     </span>
-                    <h3 style={{ fontSize: '1.8rem', margin: 0 }}>
+                    <h3
+                      style={{
+                        fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
+                        margin: 0,
+                      }}
+                    >
                       {step.title}
                     </h3>
                   </div>
@@ -141,7 +147,7 @@ const Methodology: React.FC = () => {
                     style={{
                       color: 'var(--text-secondary)',
                       lineHeight: '1.8',
-                      fontSize: '1.05rem',
+                      fontSize: '1rem',
                     }}
                   >
                     {step.desc}

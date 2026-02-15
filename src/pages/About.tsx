@@ -279,6 +279,7 @@ const About: React.FC = () => {
                     <img
                       src={member.img}
                       alt={member.name}
+                      className="avatar-img"
                       style={{
                         width: '100%',
                         height: '100%',

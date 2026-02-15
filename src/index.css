@@ -139,12 +139,9 @@ main {
     padding: var(--section-padding) 0 !important;
   }
 
-  [style*='margin-top'],
-  [style*='marginBottom'],
-  [style*='gap'] {
-    margin-top: initial;
-    margin-bottom: initial;
-    gap: initial;
+  /* Refined mobile overrides */
+  .container > header {
+    margin-bottom: 4rem !important;
   }
 
   /* Reset specific large margins/paddings for mobile */
@@ -193,9 +190,10 @@ main {
     font-size: 0.75rem;
   }
 
-  /* Specific fix for images in cards on mobile */
-  .glass-card img {
-    height: 220px !important;
+  /* Only apply fixed height to portfolio/project images, not small avatars */
+  .glass-card:not(.avatar-card) img:not(.avatar-img) {
+    height: 250px !important;
+    object-position: center;
   }
 
   /* Prevent overlapping elements on tiny screens */

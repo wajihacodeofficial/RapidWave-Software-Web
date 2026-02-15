@@ -2,6 +2,8 @@ import React, {
   createContext,
   useContext,
   useState,
+  useCallback,
+  useMemo,
   type ReactNode,
 } from 'react';
 
@@ -12,8 +14,7 @@ interface WaveParams {
   amplitude: number;
 }
 
-interface WaveContextType {
-  waveParams: WaveParams;
+interface WaveDispatchContextType {
   setWaveParams: (params: Partial<WaveParams>) => void;
   resetWaveParams: () => void;
 }
@@ -25,32 +26,58 @@ const defaultParams: WaveParams = {
   amplitude: 1.2,
 };
 
-const WaveContext = createContext<WaveContextType | undefined>(undefined);
+const WaveParamsContext = createContext<WaveParams | undefined>(undefined);
+const WaveDispatchContext = createContext<WaveDispatchContextType | undefined>(
+  undefined
+);
 
 export const WaveProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [waveParams, setParams] = useState<WaveParams>(defaultParams);
 
-  const setWaveParams = (newParams: Partial<WaveParams>) => {
+  const setWaveParams = useCallback((newParams: Partial<WaveParams>) => {
     setParams((prev) => ({ ...prev, ...newParams }));
-  };
+  }, []);
 
-  const resetWaveParams = () => {
+  const resetWaveParams = useCallback(() => {
     setParams(defaultParams);
-  };
+  }, []);
+
+  const dispatchValue = useMemo(
+    () => ({
+      setWaveParams,
+      resetWaveParams,
+    }),
+    [setWaveParams, resetWaveParams]
+  );
 
   return (
-    <WaveContext.Provider
-      value={{ waveParams, setWaveParams, resetWaveParams }}
-    >
-      {children}
-    </WaveContext.Provider>
+    <WaveParamsContext.Provider value={waveParams}>
+      <WaveDispatchContext.Provider value={dispatchValue}>
+        {children}
+      </WaveDispatchContext.Provider>
+    </WaveParamsContext.Provider>
   );
 };
 
-export const useWave = () => {
-  const context = useContext(WaveContext);
-  if (!context) throw new Error('useWave must be used within a WaveProvider');
+export const useWaveParams = () => {
+  const context = useContext(WaveParamsContext);
+  if (context === undefined)
+    throw new Error('useWaveParams must be used within a WaveProvider');
   return context;
+};
+
+export const useWaveDispatch = () => {
+  const context = useContext(WaveDispatchContext);
+  if (context === undefined)
+    throw new Error('useWaveDispatch must be used within a WaveProvider');
+  return context;
+};
+
+// Legacy support
+export const useWave = () => {
+  const params = useWaveParams();
+  const dispatch = useWaveDispatch();
+  return { waveParams: params, ...dispatch };
 };
